@@ -826,7 +826,7 @@ module.exports = function(Chart) {
 		return longest;
 	};
 	helpers.numberOfLabelLines = function(arrayOfThings) {
-		var numberOfLines = 1;
+		var numberOfLines = 2;
 		helpers.each(arrayOfThings, function(thing) {
 			if (helpers.isArray(thing)) {
 				if (thing.length > numberOfLines) {

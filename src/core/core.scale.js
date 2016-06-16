@@ -321,7 +321,7 @@ module.exports = function(Chart) {
 				}
 
 				var largestTextWidth = helpers.longestText(me.ctx, tickLabelFont, me.ticks, me.longestTextCache);
-				var tallestLabelHeightInLines = helpers.numberOfLabelLines(me.ticks);
+				var tallestLabelHeightInLines = helpers.numberOfLabelLines(this.ticks);
 				var lineSpace = tickFontSize * 0.5;
 
 				if (isHorizontal) {
@@ -329,7 +329,7 @@ module.exports = function(Chart) {
 					me.longestLabelWidth = largestTextWidth;
 
 					// TODO - improve this calculation
-					var labelHeight = (Math.sin(helpers.toRadians(me.labelRotation)) * me.longestLabelWidth) + (tickFontSize * tallestLabelHeightInLines) + (lineSpace * tallestLabelHeightInLines);
+					var labelHeight = (Math.sin(helpers.toRadians(this.labelRotation)) * this.longestLabelWidth) + (tickFontSize * tallestLabelHeightInLines) + (lineSpace * tallestLabelHeightInLines);
 
 					minSize.height = Math.min(me.maxHeight, minSize.height + labelHeight);
 					me.ctx.font = tickLabelFont;
